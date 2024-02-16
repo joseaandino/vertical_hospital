@@ -19,7 +19,7 @@
                        <div class="o_setting_right_pane">
                            <span class="o_form_label">URL del endpoint</span>
                            <div class="text-muted content-group mt16">
-                               <field name="end_point_hospital"/>
+                               <field name="end_point_hospital" style="width:100%;"/>
                            </div>
                        </div>
                    </div>

@@ -33,5 +33,11 @@ class patientHospital(models.Model):
         for i in self.nif:
             if i.isalpha():
                 raise ValidationError("El documento de identidad no puede contener letras")
+
+
+#Inherit the res settings module to add vertical_hospital in settings form view
+class hospitalSettings(models.TransientModel):
+   _inherit = 'res.config.settings'
+   end_point_hospital = fields.Char(string="URL del endpoint")
         
         

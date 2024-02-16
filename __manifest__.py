@@ -35,6 +35,7 @@
         "views/treatment_view.xml",
         "report/patient_report.xml",
         "report/patient_template.xml",
+        "views/hospital_settings_form.xml",
     ],
     'installable': True,
 }

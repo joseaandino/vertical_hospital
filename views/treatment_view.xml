@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- Form View -->
+    <record id="treatment_hospital_form_view" model="ir.ui.view">
+            <field name="name">treatment.hospital.form.view</field>
+            <field name="model">treatment.hospital</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="doctor"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+    </record>
+    
+    <!-- Tree View -->
+    <record id="treatment_hospital_tree_view" model="ir.ui.view">
+            <field name="name">treatment.hospital.tree.view</field>
+            <field name="model">treatment.hospital</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="doctor"/>
+                </tree>
+            </field>
+    </record>
+    
+    
+    <record id="action_treatment_hospital" model="ir.actions.act_window">
+        <field name="name">Tratamientos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">treatment.hospital</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="treatment_hospital_management"
+        name="Tratamientos"
+        action="action_treatment_hospital"
+        parent="vertical_hospital_root"
+        sequence="10"/>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <!-- Root Menu of Medical Reservation App-->
+    <menuitem
+        id="vertical_hospital_root"
+        name="Vertical Hospital"
+        web_icon="vertical_hospital,static/description/icon.png"
+        sequence="0"/>
+</odoo>

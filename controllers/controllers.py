@@ -15,7 +15,7 @@ class patientController(http.Controller):
             for rec in patients_rec:
                 vals = {
                     'seq': rec.name,
-                    'name': rec.first_name,
+                    'name': rec.first_name + " " + rec.last_name, 
                     'rnc': rec.nif,
                     'state': rec.state,
                 }

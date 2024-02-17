@@ -1,31 +1,31 @@
 <odoo>
-<template id="report_patient">
-    <t t-call="web.external_layout">
-    <t t-call="web.html_container">
-        <h2>Reporte de pacientes</h2>
-        <t t-foreach="docs" t-as="o">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Secuencia</th>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Documento de identidad</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
+    <template id="report_patient">
+        <t t-call="web.external_layout">
+            <t t-call="web.html_container">
+                <h2>Reporte de pacientes</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Secuencia</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Documento de identidad</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="o">
+                            <tr class="text-center">
                                 <td><t t-esc="o.name"/></td>
                                 <td><t t-esc="o.first_name"/></td>
                                 <td><t t-esc="o.last_name"/></td>
                                 <td><t t-esc="o.nif"/></td>
                                 <td><t t-esc="o.state"/></td>
                             </tr>
-                        </tbody>
-                    </table>
-                </t>
+                        </t>
+                    </tbody>
+                </table>
             </t>
         </t>
-</template>
+    </template>
 </odoo>
